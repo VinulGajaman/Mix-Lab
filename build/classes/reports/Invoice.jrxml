@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69059b5d-86bc-4e9e-a8fb-9e318a3123be">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter2.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<parameter name="Parameter3" class="java.lang.String"/>
+	<parameter name="Parameter4" class="java.lang.String"/>
+	<parameter name="Parameter5" class="java.lang.String"/>
+	<parameter name="Parameter6" class="java.lang.String"/>
+	<parameter name="Parameter7" class="java.lang.String"/>
+	<parameter name="Parameter8" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `invoice_item` WHERE `invoice_id`=$P{Parameter8};]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="invoice_item"/>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="invoice_item"/>
+	</field>
+	<field name="qty" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="invoice_item"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="171" splitType="Stretch">
+			<image>
+				<reportElement x="167" y="0" width="220" height="79" uuid="e341645e-18cf-43f6-ba31-a5d5b3bce862"/>
+				<imageExpression><![CDATA["C:/Users/Home/Downloads/MIXLAB_free-file (1).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="177" y="100" width="103" height="29" uuid="ed9589f1-894d-4c0d-9807-b251b298b478"/>
+				<textElement>
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<text><![CDATA[INVOICE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="100" width="170" height="29" uuid="fc7c81d0-cb2b-40c5-9131-9d20ae877133"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="350" y="150" width="50" height="20" uuid="bcd6ac80-a412-4912-88c5-c721154a3b95"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="150" width="158" height="20" uuid="3d795ed8-a008-4631-96a4-114925ec8050"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="387" y="20" width="187" height="40" forecolor="#2FDE49" backcolor="#5AE85D" uuid="e9c75977-83b7-4943-8985-017febdeffc0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="20" width="186" height="40" forecolor="#62C462" backcolor="#53E068" uuid="8a02da7b-63cc-4b97-953d-73d391b3c8bd"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="122" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="1" width="594" height="121" forecolor="#51C94B" backcolor="#FAFAFA" uuid="613563df-3ef3-4164-be5c-9492d447e814"/>
+				<box>
+					<pen lineWidth="2.5" lineStyle="Dashed"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="11" y="12" width="109" height="30" forecolor="#4E9C3E" uuid="12fce416-8242-4156-8716-4df0a8a537ae"/>
+					<textElement>
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[INVOICE TO :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="13" y="52" width="219" height="30" uuid="75bd9bda-6bc4-4450-a4ac-7562e241e291"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Parameter3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="13" y="92" width="219" height="30" uuid="623d8586-ff22-4f9b-a066-5a2719c69a86"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Parameter4}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="418" y="12" width="169" height="30" forecolor="#438A33" uuid="3ec43037-a535-45e4-aac1-b00543d15009"/>
+					<textElement>
+						<font size="20"/>
+					</textElement>
+					<text><![CDATA[MixLab Pharmacy]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="420" y="44" width="168" height="78" uuid="c20e440b-f9b7-4705-91a1-98551e684231"/>
+					<textElement>
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[No.61,BaseLine Road,Colombo 14.                  +94770334443]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="1" width="280" height="40" backcolor="#D6D2D2" uuid="115dabb1-031c-4369-9a1f-5b8e783e13ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="260" y="2" width="109" height="39" backcolor="#D4D4D4" uuid="0d35238c-1ecb-49f2-b951-7af339981bea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Qty :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="1" width="203" height="40" backcolor="#D6D2D2" uuid="a9809696-fabc-403e-a2c7-5790fd8144e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Price (Rs.) :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="0" width="280" height="30" uuid="83313caf-bfc2-4e2c-9fef-7f874988d4e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2911e8c2-939c-42d0-9f14-d7398e502ba9"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="108" height="30" uuid="816d6927-67d3-4126-ac6e-ad8656a95582">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d91ebac1-422e-419d-b4bb-52d4b054c1ce"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="205" height="30" uuid="bdd20f0d-9d4f-4f5f-bdb8-98a20519f20d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a86e01c-c387-445f-93a4-442a9caee7ed"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="171" splitType="Stretch">
+			<staticText>
+				<reportElement x="259" y="0" width="109" height="35" uuid="9b97daf2-9032-469d-b9db-4bea1a26391c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="35" width="110" height="40" uuid="d2e8456b-f7c1-4246-8d29-4202c628cefa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="0" width="205" height="30" uuid="9fde6707-a17e-41f8-bd8d-68d0529f775e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="35" width="203" height="40" uuid="f0e0d28b-5135-4779-ae71-1825891ddc71"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="75" width="109" height="30" uuid="fb5c54f2-9dcb-4188-bdac-a1679f6d080a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="75" width="205" height="30" uuid="db2661d6-57d4-4876-bed1-3b717c610f97"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter7}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="23" width="594" height="36" forecolor="#F7FFF7" backcolor="#3CC738" uuid="d612412b-43c3-4474-9f6f-8ab7050e80b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Thank You For Your Business !]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="56" splitType="Stretch"/>
+	</summary>
+</jasperReport>
